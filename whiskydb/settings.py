@@ -89,3 +89,7 @@ AUTH_USER_MODEL = 'profiles.User'
 TEMPLATE_DIRS = (
                   os.path.join(BASE_DIR, 'whiskydb', 'templates'),
 )
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'whiskydb', 'static'),
+)
