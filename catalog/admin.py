@@ -11,8 +11,11 @@ class VarietyAdmin(admin.ModelAdmin):
 
 
 class WhiskyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'distillery', 'age', 'variety')
+    list_display = ('name', 'distillery', 'age', 'variety', 'get_purchases')
 
+    def get_purchases(self, obj):
+        return obj.purchase_set.count()
+    get_purchases.short_description = 'Purchases'
 
 admin.site.register(Distillery, DistilleryAdmin)
 admin.site.register(Variety, VarietyAdmin)
