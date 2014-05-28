@@ -4,19 +4,19 @@ Whisky DB
 Installation
 ------------
 
- 1. ** CREATE A VIRTUAL ENVIRONMENT **
- 2. Clone Code
- 2. Install requirements
- 3. Generate database
- 4. Run migrations
+Create virtual environment
 
     virtualenv whiskydb
     cd whiskydb/
     source bin/activate
 
+Clone code and install requirements
+
     git clone ... whiskydb
     cd whiskydb/
     pip install -r requirements.txt
+
+Install database and run migrations
 
     ./manage.py syncdb
     ./manage.py migrate
