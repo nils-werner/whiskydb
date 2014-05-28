@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ whisky.name }}</h2>
+
+<dl>
+    <dt>Distillery</dt>
+    <dd> {{ whisky.distillery }}</dd>
+    <dt>Age</dt>
+    <dd> {{ whisky.age }}</dd>
+</dl>
+{% endblock %}

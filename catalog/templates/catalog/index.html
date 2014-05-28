@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    {% for whisky in whiskies %}
+    <li><a href="{% url 'detail' whisky.id %}">{{ whisky.distillery }} {{ whisky.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
